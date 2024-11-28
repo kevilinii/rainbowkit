@@ -3,8 +3,9 @@ import {
   type CoinbaseWalletParameters,
   coinbaseWallet as coinbaseConnector,
 } from 'wagmi/connectors';
-import { isIOS } from '../../../utils/isMobile';
-import type { Wallet, WalletDetailsParams } from '../../Wallet';
+import import { coinbaseWallet } from '@rainbow-me/rainbowkit/wallets';
+// Enable Coinbase Smart Wallet for testing
+coinbaseWallet.preference = 'smartWalletOnly';
 
 export interface CoinbaseWalletOptions {
   appName: string;
